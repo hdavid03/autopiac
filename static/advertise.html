@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<img src="menu.png" style="display:block; float:left;" height="152" width="231">
+		<h1 class="h1 h1-lead" ><a class="btn" style="font-size:44px; font-color:#343a40;" href="index.html">Eladó autók</a></h1>
+	</head>
+	<body>
+		<nav class="navbar navbar-light nav-tabs bg-gray navbar-expand">
+			<ul class="navbar-nav mr-auto"><li class="nav-item">
+				<form action="results.html" class="form-inline" method="post">
+					<input class="btn btn-gray border btn-outline-light" type="search" name="search" placeholder="Keressen ajánlatot" />
+				</form></li>
+				<li class="nav-item"><a href="index.html" class="nav-link">Hirdetések</a></li>
+				<li class="nav-item"><a href="login.html" class="nav-link bg-light">Bejelentkezés</a></li>
+				<li class="nav-item" ><a href="registration.html"  class="nav-link bg-primary text-white">Regisztráció</a></li>
+				<li class="nav-item"><a href="myoffers.html" class="nav-link">Hirdetéseim</a></li>
+				<li class="nav-item"><a href="advertise.html" class="nav-link bg-secondary">Új hirdetés</a></li>
+				<li class="nav-item"><a href="profile.html" class="nav-link">Profilom</a></li>
+				<li class="nav-item" ><a href="index.html" class="nav-link text-danger bg-light">Kijelentkezés</a></li>
+			</ul>
+		</nav>
+	</body>
+<link rel="stylesheet" href="style.css">
+<div class="container main-content">
+	<div class="container footer-content">
+		<div class="container bg-color" >
+			<head>
+				<title>Új hirdetés feladása</title>
+				<h1>Adjon fel hirdetést!</h1>
+			</head>
+		</div>
+		<body>
+		<form action="insertad.html" method="post" name="ad">
+			<div class="card" id="cardpad">
+			<fieldset>
+				<div class="card-header">
+					<legend>A hirdetés címe</legend>
+					<input class="form-control-md" type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" required value="" maxlength="90"></textarea>
+				</br>
+				</div>
+			</fieldset>
+				<div class="card-body">
+				</br>
+			<fieldset>
+				<legend>Az autó adatai</legend>
+				<label for="marka" id="textl">Neve:</label>
+				<input class="form-control-md" id="textl" type="text" name="marka" required value="" maxlength="40" />
+				<br/>
+				<label for="allapot" id="textl">Állapota:</label>
+				<select class="form-control-md" style="width:20%" name="allapot" size=1>
+					<option value="normal">normál</option>
+					<option value="ujszeru" selected>újszerű</option>
+					<option value="viseletes">viseletes</option>
+					<option value="serult">sérült</option>
+				</select>
+				<br/>
+				<label id="textl" for="ar">Ár (Ft):</label>
+				<input id="textl" class="form-control-md" type="text" name="ar" required value="" placeholder="csak egész szám pl.:500000" maxlength="8" pattern="[0-9]{1,}" />
+			</fieldset>
+			</br>
+			</div>
+				<div class="card-footer">
+					<fieldset>
+						<legend>Leírás (nem kötelező)</legend>
+						<textarea style="width:60%;" class="form-control" name="leiras"  cols="70" rows="4" placeholder="(max 350 karakter)" maxlength="350"></textarea>
+					</fieldset>
+					<br/>
+					<input class="btn btn-primary form-control-lg"  type="submit" value="Hirdetésfeladás" name="ujad" />
+				</div>
+			</div>
+		</form>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		</body>
+	</div>
+</div>
+<div class="container main-content">
+<footer style="text-align:center; height:100px; margin-top:100px; font-size:14px;">
+	<img src="indeximg.png" style="float:left; position:relative;" height='89' width='191' />
+	<p><i>Ha bármi kérdése merülne fel az oldallal, vagy a használatával kapcsolatban<br/>
+		<b>Elérhetőség: </b>Hajdu Dávid (+36-30-7438076) hdavid998@gmail.com
+	</i></p>
+</footer>
+</div>
+</html>
+
