@@ -1,7 +1,6 @@
 /**
- * Típus: POST
- * Bejelentkezésnél megnézi, hogy létezik-e az e-mail jelszó páros.
- * Ha nem létezik, hibaüzenet jön, ha igen, akkor átirányítja a /profile oldalra
+ * Ellenőrzi, hogy a felhasználó be van-e jelentkezve,
+ * és ennek megfelelően tölti be a menüt.
  */
 
 const requireOption = require('../requireOption');
