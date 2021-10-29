@@ -31,32 +31,32 @@ module.exports = function (app) {
 
     app.post('/',
         checkUserMW(objRepo),
-	authMW(objRepo),
-	getUserMW(objRepo),
+		authMW(objRepo),
+		getUserMW(objRepo),
         renderMW(objRepo, 'index'));
 
     app.use('/profil/:iduser',
         checkUserMW(objRepo),
-	authMW(objRepo),
-	getUserMW(objRepo),
+		authMW(objRepo),
+		getUserMW(objRepo),
         renderMW(objRepo, 'edituser'));
    
     app.post('/profil/:iduser/edit',
         checkUserMW(objRepo),
-	authMW(objRepo),
-	getUserMW(objRepo),
-	saveUserMW(objRepo),
+		authMW(objRepo),
+		getUserMW(objRepo),
+		saveUserMW(objRepo),
         renderMW(objRepo, 'edituser'));
 
     app.use('/uj_jelszo',
         checkUserMW(objRepo),
-	renderMW(objRepo, 'newpasswd'));
+		renderMW(objRepo, 'newpasswd'));
 	
     app.post('/uj_jelszo',
         checkUserMW(objRepo),
-	newPasswdMW(objRepo),
-	saveUserMW(objRepo),
-	renderMW(objRepo, 'newpasswd'));
+		newPasswdMW(objRepo),
+		saveUserMW(objRepo),
+		renderMW(objRepo, 'newpasswd'));
 
     app.use('/regisztracio',
         checkUserMW(objRepo),
@@ -65,7 +65,7 @@ module.exports = function (app) {
     app.post('/ujfelhaszn',
         authMW(objRepo),
         checkUserMW(objRepo),
-	saveUserMW(objRepo),
+		saveUserMW(objRepo),
         renderMW(objRepo, 'insertuser'));
 
     app.use('/hirdetes/:iduser/ajanlataim',
@@ -82,22 +82,22 @@ module.exports = function (app) {
     app.post('/hirdetes/:iduser/hirdetesfeladas',
         authMW(objRepo),
         checkUserMW(objRepo),
-	saveAdMW(objRepo),
+		saveAdMW(objRepo),
         renderMW(objRepo, 'insertad'));
 
     app.get('/hirdetes/:iduser/delete/:idhirdetes',
         authMW(objRepo),
         checkUserMW(objRepo),
-	getAdMW(objRepo),
-	getAdListById(objRepo),
-	deleteAdMW(objRepo)),
-	renderMW(objRepo, 'myoffers'));
+		getAdMW(objRepo),
+		getAdListByUserIdMW(objRepo),
+		deleteAdMW(objRepo),
+		renderMW(objRepo, 'myoffers'));
 
     app.get('/hirdetes/:iduser/edit/:idhirdetes',
         authMW(objRepo),
         checkUserMW(objRepo),
         getAdMW(objRepo),
-	saveAdMW(objRepo),
+		saveAdMW(objRepo),
         renderMW(objRepo, 'editad'));
 
 };
