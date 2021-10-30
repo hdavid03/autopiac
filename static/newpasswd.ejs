@@ -1,0 +1,38 @@
+<%- include('menu') -%>
+<head>
+	<title>Elfelejtett jelszó</title>
+    	<link rel="stylesheet" href="style.css">
+		<div class="container main-content"></div>
+<br/>
+</head>
+	<div class="container main-content">
+		<div class="container footer-content">
+
+			<form class="card" id="cardpad" action="insertuser.html" method="post" name="reg">
+		<br/>
+			<fieldset>
+				<legend>A belépéshez szükséges jelszó módosítása</legend>
+					<div class="form-group">
+						<label id="stextl" for="email">E-mail cím:</label>
+						<input class="form-control-md" type="text" name="email" required value="" maxlength="40" />
+				<br/>
+						<label id="stextl" for="jelszo">Új jelszó:</label>
+						<input class="form-control-md" type="password" name="jelszo" title="legalább 8 karakter, legyen benne szám, kis és nagy betű is" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+				<br/>
+						<label id="stextl" for="jelszoujra">Új jelszó újra:</label>
+						<input class="form-control-md" type="password" name="jelszoujra" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+					</div>
+			</fieldset>
+				</br>
+					<div class="card-footer-md">
+						<input class="btn btn-primary" type="submit" value="Megerősítés és küldés" name="ujfiok" />
+					</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+<%- include('footer') -%>
+</html>

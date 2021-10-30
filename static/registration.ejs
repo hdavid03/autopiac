@@ -1,0 +1,67 @@
+<%- include('menu') -%>
+<link rel="stylesheet" href="style.css">
+<head>
+<div class="container main-content">
+	<title>Regisztráció</title>
+		<h1>Új felhasználói fiók létrehozása</h1>
+		<h4>Kérjük adja meg az alább felsorolt adatokat!</h4>
+		<h5 class="badge badge-warning">Minden mező kitöltése kötelező!</h5>
+</div>
+<br/>
+</head>
+	<div class="container main-content">
+		<div class="container footer-content">
+
+		<form class="card" id="cardpad" action="/ujfelhaszn" method="post" name="reg">
+			<fieldset>
+				<legend>Név</legend>
+				<div class="form-group">
+					<label for="vnev">Vezetéknév:</label>
+					<input id="textl" class="form-control-md" type="text" name="vnev" required value="" maxlength="25" />
+					<label id="textr" for="knev" style="padding-left:40px;">Keresztnév:</label>
+					<input id="textl" class="form-control-md" type="text" name="knev" required value="" maxlength="25" />
+				</div>
+			</fieldset>
+		</br>
+			<fieldset>
+				<legend>Lakhely</legend>
+				<div class="form-group">
+					<label for="lakhely">csak a települést kérjük:</label>
+					<input id="textl" class="form-control-md" type="text" name="lakhely" required value="" maxlength="55" />
+				</div>
+			</fieldset>
+		</br>
+			<fieldset>
+				<legend>Telefonszám</legend>
+				<div class="form-group">
+					<input  id="textl" class="form-control-md" type="text" name="szam" title="(mobiltelefon)" placeholder="+36-00-1234567" required value="" maxlength="14" />
+				</div>
+		</fieldset>
+		<br/>
+			<fieldset>
+				<legend>A belépéshez szükséges adatok</legend>
+				<div class="form-group">
+					<label id="stextl" for="email">E-mail cím:</label>
+					<input class="form-control-md" type="text" name="email" required value="" maxlength="40" />
+				<br/>
+					<label id="stextl" for="jelszo">Jelszó:</label>
+					<input class="form-control-md" type="password" name="jelszo" title="legalább 8 karakter, legyen benne szám, kis és nagy betű is" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+				<br/>
+					<label id="stextl" for="jelszoujra">Jelszó újra:</label>
+					<input class="form-control-md" type="password" name="jelszoujra" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+				</div>
+			</fieldset>
+		</br>
+			<div class="card-footer-md">
+				<input class="btn btn-primary" type="submit" value="Megerősítés" name="ujfiok" />
+			</div>
+		</form>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</div>
+<%-include('footer')-%>
+</html>

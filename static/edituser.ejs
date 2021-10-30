@@ -1,0 +1,31 @@
+<%- include('menu') -%>
+<link rel="stylesheet" href="style.css">
+	<div class="card card-header"><div class="container main-content">
+		<h3>Töltse ki azokat a mezőket, ahol módosítani szeretne, majd nyomja meg a Megerősítés gombot!</h3>
+	</div></div>
+<div class="container main-content">
+		<br/>
+			<div class="card card-sm" id="cardpad">
+				<form action="/profil/:iduser/edit" class="card-body" method="post" name="edit">
+				<label for="nev" id="textl">Név:</label>
+				<input type="text" name="nev" />
+			<br/>
+				<label for="email" id="textl">E-mail:</label>
+				<input type="text" name="email" />
+			<br/>
+				<label for="lakhely" id="textl">Lakhely:</label>
+				<input type="text" name="lakhely" />
+			<br/>
+				<label for="szam" id="textl">Telefonszám:</label>
+				<input type="text" name="szam" placeholder="+36-00-1234567" />
+			<br/>
+				<input type="submit" class="btn btn-primary" name="edituser" value="Módosítás" />
+				</form>
+			</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
+</body>
+	<%- include('footer') -%>
+</html>
