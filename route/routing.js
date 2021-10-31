@@ -1,4 +1,3 @@
-
 const authMW = require('../middleware/auth/authMW');
 const checkUserMW = require('../middleware/auth/checkUserMW');
 const renderMW = require('../middleware/renderMW');
@@ -99,5 +98,4 @@ module.exports = function (app) {
         getAdMW(objRepo),
 		saveAdMW(objRepo),
         renderMW(objRepo, 'editad'));
-
 };
