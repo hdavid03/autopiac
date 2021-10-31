@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/routing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/advertise.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/buying.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/editad.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/edituser.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/footer.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/indeximg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/insertad.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/insertuser.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/menu.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/myoffers.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/newpasswd.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/profile.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/registration.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" />
-    </list>
+    <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +64,7 @@
       <workItem from="1635624754931" duration="786000" />
       <workItem from="1635625553782" duration="658000" />
       <workItem from="1635626226365" duration="105000" />
-      <workItem from="1635695909138" duration="2456000" />
+      <workItem from="1635695909138" duration="2658000" />
     </task>
     <servers />
   </component>
