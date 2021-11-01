@@ -1,14 +1,14 @@
-const authMW = require('../middleware/auth/authMW');
-const checkUserMW = require('../middleware/auth/checkUserMW');
-const renderMW = require('../middleware/renderMW');
-const deleteAdMW = require('../middleware/ad/deleteAdMW');
-const getAdListByUserIdMW = require('../middleware/ad/getAdListByUserIdMW');
-const getAdListMW = require('../middleware/ad/getAdListMW');
-const getAdMW = require('../middleware/ad/getAdMW');
-const saveAdMW = require('../middleware/ad/saveAdMW');
-const getUserMW = require('../middleware/user/getUserMW');
-const saveUserMW = require('../middleware/user/saveUserMW');
-const newPasswdMW = require('../middleware/user/newPasswdMW');
+const authMW = require('../middlewares/auth/authMW');
+const checkUserMW = require('../middlewares/auth/checkUserMW');
+const renderMW = require('../middlewares/renderMW');
+const deleteAdMW = require('../middlewares/ad/deleteAdMW');
+const getAdListByUserIdMW = require('../middlewares/ad/getAdListByUserIdMW');
+const getAdListMW = require('../middlewares/ad/getAdListMW');
+const getAdMW = require('../middlewares/ad/getAdMW');
+const saveAdMW = require('../middlewares/ad/saveAdMW');
+const getUserMW = require('../middlewares/user/getUserMW');
+const saveUserMW = require('../middlewares/user/saveUserMW');
+const newPasswdMW = require('../middlewares/user/newPasswdMW');
 
 module.exports = function (app) {
     const objRepo = {};
