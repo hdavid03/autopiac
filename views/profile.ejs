@@ -1,9 +1,6 @@
 <%- include('menu') -%>
-<link rel="stylesheet" href="style.css">
 	<div class="container main-content">
-	<head>
 		<title>Profil</title>
-	</head>
 		<div class="card-header-md bg-light" >
 			<div class="card-title text-dark" style="font-size:26px; padding:44px;">S
 				zemélyes adatok
@@ -16,7 +13,7 @@
 				<tr><th id="textl">E-mail:</th><td><%= %></td><tr>
 				<tr><th id="textl">Lakhely:</th><td><%= %></td><tr>
 				<tr><th id="textl">Telefonszám:</th><td><%= %></td><tr>
-				<tr><td id="textl" colspan="2"><a class="btn btn-warning" href="/profil/:iduser">Módosítani szeretném az adataimat</a></td></tr>
+				<tr><td id="textl" colspan="2"><a class="btn btn-warning" href="/profil/<%= regUser._id %>">Módosítani szeretném az adataimat</a></td></tr>
 			</table>
 <br/>
 		</div>

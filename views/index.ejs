@@ -1,10 +1,7 @@
 <%- include('menu') -%>
-	<head>
 		<title>Elado autok</title>
-    		<link rel="stylesheet" href="style.css">
-	</head>
 	<div class="container main-content">
-		<form action="index.html" method="get">
+		<form action="/" method="get">
 		<div class="card-hearder" style="padding-left:750px;">
 			<label>Rendezés:</label>
 				<select name="sel" size=1>
@@ -31,12 +28,12 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td id="pad" colspan="2" style="border-bottom:solid #dee2e6;">CIM</td>
-						<td id="pad" style="border-bottom:solid #dee2e6;"><%= %> Ft</td>
-						<td id="pad" style="border-bottom:solid #dee2e6;"><%= %></td>
-						<td id="pad" style="border-bottom:solid #dee2e6;"><%= %></td>
-						<td id="pad" style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; width:190px;"><%= %></td>
-						<td style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; text-align:center;"><a class="btn btn-succes btn-sm bg-light"  style="border:1px solid #dee2e6; width:82px; color:green;" href="/hirdetes/:idad">Megnézem</a></td>
+						<td id="pad" colspan="2" style="border-bottom:solid #dee2e6;"><%= advertising.title %></td>
+						<td id="pad" style="border-bottom:solid #dee2e6;"><%= advertising.price %> Ft</td>
+						<td id="pad" style="border-bottom:solid #dee2e6;"><%= advertising.state %></td>
+						<td id="pad" style="border-bottom:solid #dee2e6;"><%= advertising.city %></td>
+						<td id="pad" style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; width:190px;"><%= advertising.date %></td>
+						<td style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; text-align:center;"><a class="btn btn-succes btn-sm bg-light"  style="border:1px solid #dee2e6; width:82px; color:green;" href="/hirdetes/<%= advertising.id %>">Megnézem</a></td>
 					</tr>
 				</tbody>
 			</table>

@@ -1,34 +1,30 @@
 <%- include('menu') -%>
-<link rel="stylesheet" href="style.css">
-<head>
 	<title>Hirdetés módosítása</title>
 	<div class="container main-content">
 		<h1>Módosítsa hirdetését, ahol szeretné</h1>
     </div>
 	<br/>
-</head>
 	<div class="container main-content">
 		<div class="card-header">
 			<table class="table table-sm">
 					<caption style="text-align:right; padding-right:10px;">Módosítani kívánt hirdetés</caption>
 				<tr>
-					<th>Hirdetés címe</th><th>Márkanév</th><th>Állapot</th><th>Ár</th><th>Dátum</th>
+					<th>Hirdetés címe</th><th>Márkanév</th><th>Állapot</th><th>Ár</th>
 				</tr>
 				<tr>
-					<td><%= %></td>
-					<td><%= %></td>
-					<td><%= %></td>
-					<td><%= %></td>
-					<td><%= %></td>
+					<td><%= advertising.title %></td>
+					<td><%= advertising.brand %></td>
+					<td><%= advertising.state %></td>
+					<td><%= advertising.price %></td>
 				</tr>
 				<tr>
 					<th rowspan="3">Leírás</th>
-					<td colspan="4" rowspan="3">LEIRAS</td>
+					<td colspan="4" rowspan="3"><%= advertising.description %></td>
 				</tr>
 			</table>
 		</div>
 		<div class="card-body">
-			<form action="/hirdetes/:iduser/edit/:idhirdetes" method="get" name="ad">
+			<form action="/hirdetes/<%= regUser._id %>/edit/<%= advertising._id %>" method="get" name="ad">
 				<fieldset>
 					<legend>A hirdetés címe</legend>
 					<input type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" maxlength="90">

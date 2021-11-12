@@ -1,9 +1,6 @@
 <%- include('menu') -%>
-<link rel="stylesheet" href="style.css">
 	<div class="container main-content">
-	<head>
 		<title>Hirdetéseim</title>
-	</head>
 	</div>
 	<div class="footer-content container">
 		<table class="table table-striped table-sm table-bordered">
@@ -19,13 +16,13 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td id="bordbsz"><%= %></td>
-			<td><%= %></td>
-			<td><%= %></td>
-			<td><%= %>Ft</td>
-			<td><%= %></td>
-			<td style="text-align:center;"><a class="btn btn-success btn-sm" href="editad.html"><i class="fa fa-edit"></i>Módosítás</a></td>
-			<td style="border-right:2px groove; text-align:center;"><a class="btn btn-danger btn-sm text-white" href="myoffers.html">Törlés</a></td>
+			<td id="bordbsz"><%= advertising.title %></td>
+			<td><%= advertising.brand %></td>
+			<td><%= advertising.state %></td>
+			<td><%= advertising.price %>Ft</td>
+			<td><%= advertising.date %></td>
+			<td style="text-align:center;"><a class="btn btn-success btn-sm" href="/hirdetes/<%= regUser._id %>/edit/<%= advertising._id %>"><i class="fa fa-edit"></i>Módosítás</a></td>
+			<td style="border-right:2px groove; text-align:center;"><a class="btn btn-danger btn-sm text-white" href="/hirdetes/<%= regUser._id %>/delete/<%= advertising._id %>">Törlés</a></td>
 		</tr>
 		<tr>
 			<th style="height:70px; border-bottom:2px solid #000000; border-left:2px groove;">Leírás:</td>

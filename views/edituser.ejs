@@ -1,12 +1,11 @@
 <%- include('menu') -%>
-<link rel="stylesheet" href="style.css">
 	<div class="card card-header"><div class="container main-content">
 		<h3>Töltse ki azokat a mezőket, ahol módosítani szeretne, majd nyomja meg a Megerősítés gombot!</h3>
 	</div></div>
 <div class="container main-content">
 		<br/>
 			<div class="card card-sm" id="cardpad">
-				<form action="/profil/:iduser/edit" class="card-body" method="post" name="edit">
+				<form action="/profil/<%= regUser._id %>/edit" class="card-body" method="post" name="edit">
 				<label for="nev" id="textl">Név:</label>
 				<input type="text" name="nev" />
 			<br/>

@@ -1,5 +1,4 @@
 <%- include('menu') -%>
-		<link rel="stylesheet" href="style.css">
 		<div class="container main-content">
 			<div class="container footer-content">
 				<div class="container bg-color" >
@@ -8,12 +7,12 @@
 						<h1>Adjon fel hirdetést!</h1>
 					</head>
 				</div>
-				<form action="/hirdetes/:iduser/hirdetesfeladas" method="post" name="ad">
+				<form action="/hirdetes/<%= regUser._id %>/hirdetesfeladas" method="post" name="ad">
 					<div class="card" id="cardpad">
 					<fieldset>
 						<div class="card-header">
 							<legend>A hirdetés címe</legend>
-							<input class="form-control-md" type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" required value="" maxlength="90"></textarea>
+							<input class="form-control-md" type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" required value="" maxlength="90" />
 						</br>
 						</div>
 					</fieldset>

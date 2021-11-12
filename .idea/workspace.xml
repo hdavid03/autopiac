@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/advertise.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/advertise.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/buying.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/buying.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/editad.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/editad.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edituser.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/edituser.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/insertad.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/insertad.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/menu.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/menu.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/myoffers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/myoffers.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +79,8 @@
       <workItem from="1635626226365" duration="105000" />
       <workItem from="1635695909138" duration="4095000" />
       <workItem from="1636729776014" duration="2428000" />
-      <workItem from="1636755865914" duration="553000" />
+      <workItem from="1636755865914" duration="1311000" />
+      <workItem from="1636757277634" duration="2567000" />
     </task>
     <servers />
   </component>

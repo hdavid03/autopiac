@@ -5,7 +5,7 @@ const Ad = db.model('Ad', {
 	brand: String,
 	state: String,
 	price: Number,
-	description: String
+	description: String,
 	_user: {
 		type: Schema.Types.ObjectId,
 		ref: 'User'

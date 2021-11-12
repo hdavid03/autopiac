@@ -1,27 +1,26 @@
 <%- include('menu') -%>
 			<title>Vásárlás</title>
-			<link rel="stylesheet" href="style.css">
 		<div class="container main-content">
 			<div class="card">
 				<table class="table">
 					<caption style="text-align:right; padding-right:10px;">Kiválasztott ajánlat</caption>
 					<thead class="bg-light">
 						<tr>
-							<th id="bal">Hirdetés címe</th><th id="felso">Címe</th><th>Márka</th><th>Állapot</th><th>Ár</th><th>Település</th><th>Dátum</th>
+							<th id="bal">Hirdetés címe</th><th>Márka</th><th>Állapot</th><th>Ár</th><th>Település</th><th>Dátum</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td><%= %></td>
-							<td><%= %></td>
-							<td><%= %></td>
-							<td><%= %> Ft</td>
-							<td><%= %></td>
-							<td><%= %></td>
+							<td><%= advertising.title %></td>
+							<td><%= advertising.brand %></td>
+							<td><%= advertising.state %></td>
+							<td><%= advertising.price %> Ft</td>
+							<td><%= advertising.city %></td>
+							<td><%= advertising.date %></td>
 						</tr>
 						<tr>
 							<th rowspan="3">Leírás</th>
-							<td colspan="5" rowspan="3"><%= %></td>
+							<td colspan="5" rowspan="3"><%= advertising.description %></td>
 						</tr>
 					</tbody>
 					</table>
@@ -34,11 +33,11 @@
 						</tr>
 						<tr>
 							<th id="rgt">Név:</th>
-							<td id="lft"><%= %></td>
+							<td id="lft"><%= regUser.lname + ' ' + regUser.fname %></td>
 							<th id="rgt">telefon:</th>
-							<td id="lft"><%= %></td>
+							<td id="lft"><%= regUser.phone %></td>
 							<th id="rgt">e-mail:</th>
-							<td id="lft"><%= %></td>
+							<td id="lft"><%= regUser.email %></td>
 						</tr>
 						</table>
 					</fieldset>
