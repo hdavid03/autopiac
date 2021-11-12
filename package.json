@@ -1,12 +1,12 @@
 {
   "name": "autopiac",
   "version": "1.0.0",
-  "description": "",
+  "description": "nodejs homework # autopiac",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Hajdu David",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -15,5 +15,13 @@
     "express-session": "^1.17.2",
     "nodemon": "^2.0.14",
     "session": "^0.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdavid03/autopiac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hdavid03/autopiac/issues"
+  },
+  "homepage": "https://github.com/hdavid03/autopiac#readme"
 }
