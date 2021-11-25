@@ -6,11 +6,18 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({extended: true}));
-//app.use(
-//    session( { secret: 'secret' } )
-//);
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}))
+
 // Load routing
 require('./route/routing')(app);
+
+
 
 app.use(( req, res, next) =>
     {

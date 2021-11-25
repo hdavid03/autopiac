@@ -1,8 +1,8 @@
 const requireOption = require('./requireOption');
 
-module.exports = function (objectRepository, viewName) {
-    return function (req, res) {
-        res.render(viewName, res);
+module.exports = (objectRepository, viewName) => {
+    return (req, res) => {
+        res.render(viewName, res.locals);
     };
 
 };

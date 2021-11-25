@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="" />
+    <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/ad/getAdListMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/ad/getAdListMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth/authMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth/authMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/auth/loginUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth/loginUserMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/renderMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/renderMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/user/getUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/getUserMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/user/saveUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/saveUserMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/routing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/indeximg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/menu.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/menu.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registration.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +42,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -68,6 +99,11 @@
       <workItem from="1636729776014" duration="2428000" />
       <workItem from="1636755865914" duration="1311000" />
       <workItem from="1636757277634" duration="3154000" />
+      <workItem from="1637750065806" duration="15298000" />
+      <workItem from="1637798100378" duration="4018000" />
+      <workItem from="1637802965066" duration="569000" />
+      <workItem from="1637839715761" duration="909000" />
+      <workItem from="1637841191385" duration="6346000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,8 @@ const Ad = db.model('Ad', {
 	title: String,
 	brand: String,
 	state: String,
+	city: String,
+	date: String,
 	price: Number,
 	description: String,
 	_user: {

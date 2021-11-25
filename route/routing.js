@@ -10,10 +10,16 @@ const getUserMW = require('../middlewares/user/getUserMW');
 const saveUserMW = require('../middlewares/user/saveUserMW');
 const newPasswdMW = require('../middlewares/user/newPasswdMW');
 
-module.exports = function (app) {
-    const objRepo = {};
+const UserModel = require('../models/user');
+const AdModel = require('../models/ad');
 
-    app.use('/',
+module.exports = function (app) {
+    const objRepo = {
+		UserModel: UserModel,
+		AdModel: AdModel
+	};
+
+    app.get('/',
         getAdListMW(objRepo),
         checkUserMW(objRepo),
         renderMW(objRepo, 'index'));
@@ -24,7 +30,7 @@ module.exports = function (app) {
         getUserMW(objRepo),
         renderMW(objRepo, 'buying'));
 
-    app.use('/belepes',
+    app.get('/belepes',
         checkUserMW(objRepo),
         renderMW(objRepo, 'login'));
 
@@ -61,11 +67,10 @@ module.exports = function (app) {
         checkUserMW(objRepo),
         renderMW(objRepo, 'registration'));
 
-    app.post('/ujfelhaszn',
-        authMW(objRepo),
-        checkUserMW(objRepo),
+	app.post('/ujfelhaszn',
+		checkUserMW(objRepo),
 		saveUserMW(objRepo),
-        renderMW(objRepo, 'insertuser'));
+		renderMW(objRepo, 'insertuser'));
 
     app.use('/hirdetes/:iduser/ajanlataim',
         authMW(objRepo),

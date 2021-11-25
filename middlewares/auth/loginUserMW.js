@@ -8,6 +8,9 @@ const requireOption = require('../requireOption');
 
 module.exports = function (objectrepository) {
     return function (req, res, next) {
+        if((req.body.email === 'undefined') || (req.body.passwd === 'undefined')) {
+            res.redirect('/belepes');
+        }
         next();
     };
 };
