@@ -14,8 +14,6 @@ module.exports = function (objectrepository) {
             return res.redirect('/belepes');
         }
 
-        console.log(req.body.email + req.body.passwd);
-
         UserModel.findOne( {passwd: req.body.passwd, email: req.body.email}, (error, regUser) => {
             if(error || !regUser) {
                 console.log('Itt van most');
@@ -26,12 +24,12 @@ module.exports = function (objectrepository) {
             console.log(regUser.passwd + regUser.email);
             req.session.iduser = regUser._id;
             return req.session.save( error => {
+                console.log('Save session');
                 if(error) {
                     return next(error);
                 }
-            })
+                return next();
+            });
         });
-
-        return next();
     };
 };

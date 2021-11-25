@@ -12,7 +12,7 @@
 					<fieldset>
 						<div class="card-header">
 							<legend>A hirdetés címe</legend>
-							<input class="form-control-md" type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" required value="" maxlength="90" />
+							<input class="form-control-md" type="text" name="cim" id="cim" cols="45" rows="1" placeholder="(max 90 karakter)" required value="" maxlength="90" />
 						</br>
 						</div>
 					</fieldset>
@@ -21,10 +21,10 @@
 					<fieldset>
 						<legend>Az autó adatai</legend>
 						<label for="marka" id="textl">Neve:</label>
-						<input class="form-control-md" id="textl" type="text" name="marka" required value="" maxlength="40" />
+						<input class="form-control-md" id="textl" type="text" name="marka" id="marka" required value="" maxlength="40" />
 						<br/>
 						<label for="allapot" id="textl">Állapota:</label>
-						<select class="form-control-md" style="width:14%" name="allapot" size=1>
+						<select class="form-control-md" style="width:14%" name="allapot" id="allapot" size=1>
 							<option value="normal">normál</option>
 							<option value="ujszeru" selected>újszerű</option>
 							<option value="viseletes">viseletes</option>
@@ -32,14 +32,14 @@
 						</select>
 						<br/>
 						<label id="textl" for="ar">Ár (Ft):</label>
-						<input id="textl" class="form-control-md" type="text" name="ar" required value="" placeholder="csak egész szám pl.:500000" maxlength="8" pattern="[0-9]{1,}" />
+						<input id="textl" class="form-control-md" type="text" name="ar" id="ar" required value="" placeholder="csak egész szám pl.:500000" maxlength="8" pattern="[0-9]{1,}" />
 					</fieldset>
 					</br>
 					</div>
 						<div class="card-footer">
 							<fieldset>
 								<legend>Leírás (nem kötelező)</legend>
-								<textarea style="width:60%;" class="form-control" name="leiras"  cols="70" rows="4" placeholder="(max 350 karakter)" maxlength="350"></textarea>
+								<textarea style="width:60%;" class="form-control" name="leiras" id="leiras" cols="70" rows="4" placeholder="(max 350 karakter)" maxlength="350"></textarea>
 							</fieldset>
 							<br/>
 							<input class="btn btn-primary form-control-lg"  type="submit" value="Hirdetésfeladás" name="ujad" />

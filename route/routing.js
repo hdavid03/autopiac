@@ -22,12 +22,11 @@ module.exports = function (app) {
 
     app.get('/',
         getAdListMW(objRepo),
-        checkUserMW(objRepo),
+        getUserMW(objRepo),
         renderMW(objRepo, 'index'));
 
     app.get('/hirdetes/:idad',
         getAdMW(objRepo),
-        checkUserMW(objRepo),
         getUserMW(objRepo),
         renderMW(objRepo, 'buying'));
 
@@ -36,27 +35,20 @@ module.exports = function (app) {
         renderMW(objRepo, 'login'));
 
     app.post('/',
-        checkUserMW(objRepo),
 		loginUserMW(objRepo),
-		authMW(objRepo),
+		getAdListMW(objRepo),
         renderMW(objRepo, 'index'));
 
-    app.use('/profil/:iduser',
-        checkUserMW(objRepo),
+    app.get('/profil/:iduser',
 		authMW(objRepo),
 		getUserMW(objRepo),
         renderMW(objRepo, 'edituser'));
    
     app.post('/profil/:iduser/edit',
-        checkUserMW(objRepo),
 		authMW(objRepo),
 		getUserMW(objRepo),
 		saveUserMW(objRepo),
         renderMW(objRepo, 'edituser'));
-
-    app.use('/uj_jelszo',
-        checkUserMW(objRepo),
-		renderMW(objRepo, 'newpasswd'));
 	
     app.post('/uj_jelszo',
         checkUserMW(objRepo),
@@ -64,7 +56,7 @@ module.exports = function (app) {
 		saveUserMW(objRepo),
 		renderMW(objRepo, 'newpasswd'));
 
-    app.use('/regisztracio',
+    app.get('/regisztracio',
         checkUserMW(objRepo),
         renderMW(objRepo, 'registration'));
 
@@ -73,26 +65,25 @@ module.exports = function (app) {
 		saveUserMW(objRepo),
 		renderMW(objRepo, 'insertuser'));
 
-    app.use('/hirdetes/:iduser/ajanlataim',
+    app.get('/hirdetes/:iduser/ajanlataim',
         authMW(objRepo),
-        checkUserMW(objRepo),
+		getUserMW(objRepo),
         getAdListByUserIdMW(objRepo),
         renderMW(objRepo, 'myoffers'));
 
-    app.use('/hirdetes/:iduser/new',
+    app.get('/hirdetes/:iduser/new',
         authMW(objRepo),
-        checkUserMW(objRepo),
+		getUserMW(objRepo),
         renderMW(objRepo, 'advertise'));
 
     app.post('/hirdetes/:iduser/hirdetesfeladas',
         authMW(objRepo),
-        checkUserMW(objRepo),
+		getUserMW(objRepo),
 		saveAdMW(objRepo),
         renderMW(objRepo, 'insertad'));
 
     app.get('/hirdetes/:iduser/delete/:idhirdetes',
         authMW(objRepo),
-        checkUserMW(objRepo),
 		getAdMW(objRepo),
 		getAdListByUserIdMW(objRepo),
 		deleteAdMW(objRepo),
@@ -100,7 +91,6 @@ module.exports = function (app) {
 
     app.get('/hirdetes/:iduser/edit/:idhirdetes',
         authMW(objRepo),
-        checkUserMW(objRepo),
         getAdMW(objRepo),
 		saveAdMW(objRepo),
         renderMW(objRepo, 'editad'));

@@ -11,6 +11,6 @@ module.exports = function (objectrepository) {
         if(typeof req.session.iduser === 'undefined') {
             return res.redirect('/');
         }
-        next();
+        return next();
     };
 };

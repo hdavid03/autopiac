@@ -30,7 +30,6 @@ module.exports = function (objectrepository) {
                 res.locals.regUser.lname = req.body.vnev;
                 res.locals.regUser.city = req.body.lakhely;
                 res.locals.regUser.email = req.body.email;
-                res.locals.regUser.fname = req.body.knev;
                 res.locals.regUser.phone = req.body.szam;
                 res.locals.regUser.passwd = req.body.passwd;
                 res.locals.regUser.save( error => {

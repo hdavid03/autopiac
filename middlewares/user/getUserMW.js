@@ -8,11 +8,12 @@ module.exports = function (objectrepository) {
     const UserModel = requireOption(objectrepository, 'UserModel');
     return function (req, res, next) {
         UserModel.findOne({_id: req.params.iduser}, (error, regUser) => {
-            if(error || regUser === 'undefined') {
+            if(error || !regUser) {
                 return next(error);
             }
+            res.locals.regUser = regUser;
+            return next();
         });
-        next();
     };
 };
 
