@@ -23,28 +23,30 @@ module.exports = function (objectrepository) {
         }
 
         if(typeof res.locals.regUser === 'undefined') {
-            res.locals.regUser = new UserModel();
-            res.locals.regUser.fname = req.body.knev;
-            res.locals.regUser.lname = req.body.vnev;
-            res.locals.regUser.city = req.body.lakhely;
-            res.locals.regUser.email = req.body.email;
-            res.locals.regUser.fname = req.body.knev;
-            res.locals.regUser.phone = req.body.szam;
-            if(req.body.passwd === req.body.passwd) {
+
+            if(req.body.passwd === req.body.passwdagain) {
+                res.locals.regUser = new UserModel();
+                res.locals.regUser.fname = req.body.knev;
+                res.locals.regUser.lname = req.body.vnev;
+                res.locals.regUser.city = req.body.lakhely;
+                res.locals.regUser.email = req.body.email;
+                res.locals.regUser.fname = req.body.knev;
+                res.locals.regUser.phone = req.body.szam;
                 res.locals.regUser.passwd = req.body.passwd;
                 res.locals.regUser.save( error => {
-
+                    console.log("Sikeres");
                    if(error) {
                        console.log("Itt hiba vagyok");
                        return next(error);
                    }
-                   res.session.user
-                    return next();
+
+                   return next();
                 });
 
             } else {
-                console.log("nem egyforma a jelszó");
-                alert('Nem egyforma jelszó');
+                console.log('nem egyforma a jelszó');
+                res.locals.error = 'nem egyforma a jelszó';
+                return next();
             }
         }
     };

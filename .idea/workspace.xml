@@ -6,27 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9778b87f-cb10-47ad-af2c-6f0d33f7bf0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/ad/getAdListMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/ad/getAdListMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/auth/authMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth/authMW.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middlewares/auth/loginUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth/loginUserMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/renderMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/renderMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/user/getUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/getUserMW.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middlewares/user/saveUserMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/user/saveUserMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ad.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/routing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/footer.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/indeximg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/insertuser.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/insertuser.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/menu.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/menu.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registration.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +88,7 @@
       <workItem from="1637798100378" duration="4018000" />
       <workItem from="1637802965066" duration="569000" />
       <workItem from="1637839715761" duration="909000" />
-      <workItem from="1637841191385" duration="6346000" />
+      <workItem from="1637841191385" duration="12631000" />
     </task>
     <servers />
   </component>

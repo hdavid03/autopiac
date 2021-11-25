@@ -1,5 +1,6 @@
 const authMW = require('../middlewares/auth/authMW');
 const checkUserMW = require('../middlewares/auth/checkUserMW');
+const loginUserMW = require('../middlewares/auth/loginUserMW');
 const renderMW = require('../middlewares/renderMW');
 const deleteAdMW = require('../middlewares/ad/deleteAdMW');
 const getAdListByUserIdMW = require('../middlewares/ad/getAdListByUserIdMW');
@@ -36,8 +37,8 @@ module.exports = function (app) {
 
     app.post('/',
         checkUserMW(objRepo),
+		loginUserMW(objRepo),
 		authMW(objRepo),
-		getUserMW(objRepo),
         renderMW(objRepo, 'index'));
 
     app.use('/profil/:iduser',
