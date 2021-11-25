@@ -14,15 +14,16 @@
 						<input class="btn btn-gray border btn-outline-light" type="search" name="search" id="search" placeholder="Keressen ajánlatot" />
 					</label>
 				</form></li>
-				<% %>
+				<% if(typeof regUser === 'undefined') { %>
 				<li class="nav-item"><a href="/" class="nav-link bg-warning text-white">Hirdetések</a></li>
 				<li class="nav-item"><a href="/belepes" class="nav-link bg-dark text-light">Bejelentkezés</a></li>
 				<li class="nav-item"><a href="/regisztracio"  class="nav-link bg-primary text-white">Regisztráció</a></li>
+				<% } %>
 				<li class="nav-item"><a href="/hirdetes/:iduser/ajanlataim" class="nav-link bg-light">Hirdetéseim</a></li>
 				<li class="nav-item"><a href="/hirdetes/:iduser/new" class="nav-link text-warning bg-light">Új hirdetés</a></li>
 				<li class="nav-item"><a href="/profil/:iduser" class="nav-link bg-light">Profilom</a></li>
 				<li class="nav-item"><a href="/" class="nav-link text-danger bg-light">Kijelentkezés</a></li>
-				<% %>
+
 			</ul>
 		</nav>
 		<link rel="stylesheet" href="/css/style.css">

@@ -45,7 +45,7 @@ module.exports = function (objectrepository) {
 
             } else {
                 console.log('nem egyforma a jelszó');
-                res.locals.error = 'nem egyforma a jelszó';
+                res.locals.error = 'Nem egyforma az ismételt jelszó';
                 return next();
             }
         }
