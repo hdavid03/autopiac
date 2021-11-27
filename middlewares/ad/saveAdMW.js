@@ -17,7 +17,10 @@ module.exports = function (objectrepository) {
             return res.redirect('/');
         }
             let date = new Date();
+        if(typeof res.locals.ad === 'undefined') {
             res.locals.ad = new AdModel();
+            res.locals.ad.date = date.toLocaleDateString();
+        }
             res.locals.ad.title = req.body.cim;
             res.locals.ad.brand = req.body.marka;
             res.locals.ad.state = req.body.allapot;
@@ -25,13 +28,11 @@ module.exports = function (objectrepository) {
             res.locals.ad.city = res.locals.regUser.city;
             res.locals.ad.description = req.body.leiras === 'undefined' ? '' : req.body.leiras;
             res.locals.ad._user = res.locals.regUser._id;
-            res.locals.ad.date = date.toLocaleDateString();
             res.locals.ad.save( error => {
                 if(error) {
-                    console.log("Itt hiba vagyok");
                     return next(error);
                 }
+                return next();
             });
-        return next();
     };
 };

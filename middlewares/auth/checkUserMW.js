@@ -8,8 +8,9 @@ const requireOption = require('../requireOption');
 module.exports = function (objectrepository) {
     return function (req, res, next) {
         if(typeof req.session.iduser !== 'undefined') {
-            return res.redirect('/');
-        }
+                return res.redirect('/profil/' + req.session.iduser);
+            }
         return next();
-    };
-};
+        }
+    }
+

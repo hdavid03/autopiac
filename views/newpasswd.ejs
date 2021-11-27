@@ -3,21 +3,26 @@
 		<div class="container main-content"></div>
 <br/>
 	<div class="container main-content">
+		<% if(typeof error !== 'undefined') { %>
+		<h3 class="badge badge-warning"><%= error %></h3>
+		<% } else if(typeof success !== 'undefined') { %>
+			<h3 class="badge badge-success"><%= success %></h3>
+			<% } %>
 		<div class="container footer-content">
 
-			<form class="card" id="cardpad" action="/uj_jelszo" method="post" name="reg">
+			<form class="card" id="cardpad" action="/uj_jelszo/eredmeny" method="post" name="reg">
 		<br/>
 			<fieldset>
 				<legend>A belépéshez szükséges jelszó módosítása</legend>
 					<div class="form-group">
 						<label id="stextl" for="email">E-mail cím:</label>
-						<input class="form-control-md" type="text" name="email" required value="" maxlength="40" />
+						<input class="form-control-md" type="text" name="email" id="email"  required value="" maxlength="40" />
 				<br/>
 						<label id="stextl" for="jelszo">Új jelszó:</label>
-						<input class="form-control-md" type="password" name="jelszo" title="legalább 8 karakter, legyen benne szám, kis és nagy betű is" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+						<input class="form-control-md" type="password" name="jelszo" id="jelszo" title="legalább 8 karakter, legyen benne szám, kis és nagy betű is" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
 				<br/>
 						<label id="stextl" for="jelszoujra">Új jelszó újra:</label>
-						<input class="form-control-md" type="password" name="jelszoujra" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
+						<input class="form-control-md" type="password" name="jelszoujra" id="jelszoujra" required value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="45" />
 					</div>
 			</fieldset>
 				</br>

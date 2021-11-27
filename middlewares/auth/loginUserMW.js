@@ -10,21 +10,19 @@ module.exports = function (objectrepository) {
     const UserModel = requireOption(objectrepository, 'UserModel');
     return function (req, res, next) {
         if((req.body.email === 'undefined') || (req.body.passwd === 'undefined')) {
-            console.log("Itt van ez nem jó");
             return res.redirect('/belepes');
         }
 
         UserModel.findOne( {passwd: req.body.passwd, email: req.body.email}, (error, regUser) => {
-            if(error || !regUser) {
-                console.log('Itt van most');
+            if(error) {
                 return next(error);
             }
+            if(regUser === null){
+                return res.redirect('/belepes');
+            }
             res.locals.regUser = regUser;
-            console.log("Bejelentkezés sikeres!!!!!!");
-            console.log(regUser.passwd + regUser.email);
             req.session.iduser = regUser._id;
             return req.session.save( error => {
-                console.log('Save session');
                 if(error) {
                     return next(error);
                 }

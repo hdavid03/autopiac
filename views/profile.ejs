@@ -9,10 +9,11 @@
 		<div class="card-body-sm" id="cardpad" style="position:relative; left:100px;">
 			<img src="/images/profile.png" style="display:block; float:left;" height="207" width="231">
 			<table class="table-light table" style="width:50%; height:300px;">
-				<tr><th id="textl">Név:</th><td><%= %></td><tr>
-				<tr><th id="textl">E-mail:</th><td><%= %></td><tr>
-				<tr><th id="textl">Lakhely:</th><td><%= %></td><tr>
-				<tr><th id="textl">Telefonszám:</th><td><%= %></td><tr>
+				<tr><th id="textl">Vezetéknév:</th><td><%= regUser.lname %></td><tr>
+				<tr><th id="textl">Keresztnév:</th><td><%= regUser.fname %></td><tr>
+				<tr><th id="textl">E-mail:</th><td><%= regUser.email %></td><tr>
+				<tr><th id="textl">Lakhely:</th><td><%= regUser.city %></td><tr>
+				<tr><th id="textl">Telefonszám:</th><td><%= regUser.phone %></td><tr>
 				<tr><td id="textl" colspan="2"><a class="btn btn-warning" href="/profil/<%= regUser._id %>">Módosítani szeretném az adataimat</a></td></tr>
 			</table>
 <br/>

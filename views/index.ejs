@@ -2,17 +2,8 @@
 		<title>Elado autok</title>
 	<div class="container main-content">
 		<form action="/" method="get">
-		<div class="card-hearder" style="padding-left:750px;">
-			<label>Rendezés:</label>
-				<select name="sel" size=1>
-					<option value="datum DESC">Új hirdetések elöl</option>
-					<option value="datum ASC">Régi hirdetések elöl</option>
-					<option value="termek ASC">Termék [A - Z]</option>
-					<option value="termek DESC">Termék [Z - A]</option>
-					<option value="egysegar ASC">Ár szerint növekvő</option>
-					<option value="egysegar DESC">Ár szerint csökkenő</option>
-					<input type="submit" class="btn btn-sm btn-light" style="text-align:center; margin-bottom:8px;" value="OK" name="ok"/>
-				</select>
+		<div class="card-hearder" >
+			<h3>Hirdetések</h3>
 		</div>
 		</form>
 		<div class="container footer-content">
@@ -27,7 +18,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<% for (advertising in ads) { %>
+				<% ads.forEach( advertising => { %>
 					<tr>
 						<td id="pad" colspan="2" style="border-bottom:solid #dee2e6;"><%= advertising.title %></td>
 						<td id="pad" style="border-bottom:solid #dee2e6;"><%= advertising.price %> Ft</td>
@@ -36,7 +27,7 @@
 						<td id="pad" style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; width:190px;"><%= advertising.date %></td>
 						<td style="border-bottom:solid #dee2e6; border-right:solid #dee2e6; text-align:center;"><a class="btn btn-succes btn-sm bg-light"  style="border:1px solid #dee2e6; width:82px; color:green;" href="/hirdetes/<%= advertising.id %>">Megnézem</a></td>
 					</tr>
-				<% } %>
+				<% }); %>
 				</tbody>
 			</table>
 		</div>

@@ -1,3 +1,7 @@
+/**
+ * Hirdetés séma.
+ * @type {Schema}
+ */
 const Schema = require('mongoose').Schema;
 const db = require('../config/database');
 const Ad = db.model('Ad', {

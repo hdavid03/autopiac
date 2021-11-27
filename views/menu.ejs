@@ -9,9 +9,9 @@
 	<body>
 		<nav class="navbar navbar-light bg-gray navbar-tab navbar-expand-lg">
 			<ul class="navbar-nav mr-auto"><li class="nav-item">
-				<form action="/" class="form-inline" method="post">
+				<form action="/" class="form-inline" method="get">
 					<label>
-						<input class="btn btn-gray border btn-outline-light" type="search" name="search" id="search" placeholder="Keressen ajánlatot" />
+						<input class="btn btn-gray border btn-outline-light" type="search" name="kereses" id="kereses" placeholder="Keressen ajánlatot" />
 					</label>
 				</form></li>
 				<% if(typeof regUser === 'undefined') { %>
@@ -19,10 +19,10 @@
 				<li class="nav-item"><a href="/belepes" class="nav-link bg-dark text-light">Bejelentkezés</a></li>
 				<li class="nav-item"><a href="/regisztracio"  class="nav-link bg-primary text-white">Regisztráció</a></li>
 				<% } else { %>
-				<li class="nav-item"><a href="/hirdetes/<%= regUser._id %>/ajanlataim" class="nav-link bg-light">Hirdetéseim</a></li>
+				<li class="nav-item"><a href="/hirdetes/ajanlataim/<%= regUser._id %>" class="nav-link bg-light">Hirdetéseim</a></li>
 				<li class="nav-item"><a href="/hirdetes/<%= regUser._id %>/new" class="nav-link text-warning bg-light">Új hirdetés</a></li>
 				<li class="nav-item"><a href="/profil/<%= regUser._id %>" class="nav-link bg-light">Profilom</a></li>
-				<li class="nav-item"><a href="/" class="nav-link text-danger bg-light">Kijelentkezés</a></li>
+				<li class="nav-item"><a href="/kijelentkezes" class="nav-link text-danger bg-light">Kijelentkezés</a></li>
 				<% } %>
 			</ul>
 		</nav>

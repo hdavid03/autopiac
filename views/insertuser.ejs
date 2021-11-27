@@ -5,7 +5,7 @@
 <title>Regisztráció</title>
 	<% if(typeof error === 'undefined') { %>
 		<h1>Sikeres regisztráció! Üdvözöljük az oldalon!</h1>
-	<h3> <%= regUser.email %> </h3>
+	<h3> <%= user.email %> </h3>
 	<%} else { %>
 		<h1><%= error %></h1>
 	<% } %>

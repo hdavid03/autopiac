@@ -11,11 +11,10 @@ module.exports = function (objectrepository) {
         if(res.locals.regUser === 'undefined') {
             return res.redirect('/');
         }
-        AdModel.find({_user: res.locals.regUser._id}, (error, adsById) => {
+        AdModel.find( { _user: req.params.iduser }, (error, adsById) => {
             if(error || !adsById) {
                 return next(error);
             }
-            console.log("Sikeres lekérdezés.");
             res.locals.adsById = adsById;
             return next();
         });

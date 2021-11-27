@@ -7,7 +7,8 @@ const requireOption = require('../requireOption');
 module.exports = function (objectrepository) {
     const UserModel = requireOption(objectrepository, 'UserModel');
     return function (req, res, next) {
-        UserModel.findOne({_id: req.params.iduser}, (error, regUser) => {
+        let id = typeof req.params.iduser === 'undefined' ? req.session.iduser : req.params.iduser;
+        UserModel.findOne({_id: id}, (error, regUser) => {
             if(error || !regUser) {
                 return next(error);
             }

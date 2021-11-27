@@ -6,55 +6,39 @@
 	<br/>
 	<div class="container main-content">
 		<div class="card-header">
-			<table class="table table-sm">
-					<caption style="text-align:right; padding-right:10px;">Módosítani kívánt hirdetés</caption>
-				<tr>
-					<th>Hirdetés címe</th><th>Márkanév</th><th>Állapot</th><th>Ár</th>
-				</tr>
-				<tr>
-					<td><%= advertising.title %></td>
-					<td><%= advertising.brand %></td>
-					<td><%= advertising.state %></td>
-					<td><%= advertising.price %></td>
-				</tr>
-				<tr>
-					<th rowspan="3">Leírás</th>
-					<td colspan="4" rowspan="3"><%= advertising.description %></td>
-				</tr>
-			</table>
+			<caption style="text-align:right; padding-right:10px;">Módosítani kívánt hirdetés</caption>
 		</div>
+		<form action="/hirdetes/<%= regUser._id %>/edit/<%= ad._id %>/modified" method="post" name="ad">
 		<div class="card-body">
-			<form action="/hirdetes/<%= regUser._id %>/edit/<%= advertising._id %>" method="get" name="ad">
 				<fieldset>
 					<legend>A hirdetés címe</legend>
-					<input type="text" name="cim" cols="45" rows="1" placeholder="(max 90 karakter)" maxlength="90">
+					<input type="text" name="cim" id="cim" cols="45" rows="1" value="<%= ad.title %>" maxlength="90" >
 				</br>
 				</fieldset>
-			</form>
-		</br>
+			</br>
 			<fieldset>
-				<legend>A termék adatai</legend>
+				<legend>Adatok</legend>
 				<label id="textl" for="marka">Márka:</label>
-				<input id="textl" type="text" name="marka" maxlength="40" />
+				<input type="text" name="marka" id="marka" maxlength="40" value="<%= ad.brand %>" />
 			<br/>
 				<label id="textl" for="allapot">Állapot:</label>
-				<select class="form-control-md" style="width:14%" name="allapot" size=1>
-					<option value="normal">normál</option>
-					<option value="ujszeru" selected>újszerű</option>
-					<option value="viseletes">viseletes</option>
-					<option value="serult">sérült</option>
+				<select class="form-control-md" style="width:14%" name="allapot" id="allapot" size=1 >
+					<option value="normal" <% if( ad.state === 'normál') { %> selected <% } %> >normál</option>
+					<option value="ujszeru" <% if( ad.state === 'újszerű') { %> selected <% } %> >újszerű</option>
+					<option value="viseletes" <% if( ad.state === 'viseletes') { %> selected <% } %> >viseletes</option>
+					<option value="serult"<% if( ad.state === 'sérült') { %> selected <% } %>  >sérült</option>
 				</select>
 			<br/>
 				<label id="textl" for="ar">Ár (Ft):</label>
-				<input id="textl" type="text" name="ar" placeholder="csak egész szám pl.:50" maxlength="6" pattern="[0-9]{1,}" />
+				<input type="text" name="ar" id="ar" placeholder="csak egész szám pl.:50" maxlength="8" pattern="[0-9]{1,}" value="<%= ad.price %>" />
 			<br/>
 			</fieldset>
 		</div>
 	</br>
 	<div class="card-footer">
 		<fieldset>
-			<legend>Rövid leírás</legend>
-			<textarea name="leiras" cols="70" rows="4" placeholder="(max 250 karakter)" maxlength="250"></textarea>
+			<legend>Leírás</legend>
+			<textarea name="leiras" id="leiras" cols="70" rows="4" maxlength="250"><%= ad.description %></textarea>
 		</fieldset>
 	</div>
 	<br/>
@@ -65,13 +49,5 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</div>
 </body>
-	<div class="container main-content">
-		<footer style="text-align:center; height:100px; margin-top:100px; font-size:14px;">
-			<img src="indeximg.png" style="float:left; position:relative;" height='89' width='191' />
-			<p><i>Ha bármi kérdése merülne fel az oldallal, vagy a használatával kapcsolatban<br/>
-				<b>Elérhetőség: </b>Hajdu Dávid (+36-30-7438076) hdavid998@gmail.com
-			</i></p>
-		</footer>
-	</div>
-</div>
+<%- include('footer') -%>
 </html>
