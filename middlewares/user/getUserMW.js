@@ -12,7 +12,7 @@ module.exports = function (objectrepository) {
             if(error || !regUser) {
                 return next(error);
             }
-            //console.log(res.locals.regUser.fname);
+
             res.locals.regUser = regUser;
             return next();
         });

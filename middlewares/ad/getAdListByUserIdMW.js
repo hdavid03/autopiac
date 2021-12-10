@@ -8,7 +8,7 @@ module.exports = function (objectrepository) {
 
     return function (req, res, next) {
         const AdModel = requireOption(objectrepository, 'AdModel');
-        if(res.locals.regUser === 'undefined') {
+        if(typeof res.locals.regUser === 'undefined') {
             return res.redirect('/');
         }
         AdModel.find( { _user: req.params.iduser }, (error, adsById) => {

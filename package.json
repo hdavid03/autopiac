@@ -13,6 +13,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "mocha": "^9.1.3",
     "mongoose": "^6.0.13",
     "nodemon": "^2.0.15",
     "session": "^0.1.0"
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/hdavid03/autopiac/issues"
   },
-  "homepage": "https://github.com/hdavid03/autopiac#readme"
+  "homepage": "https://github.com/hdavid03/autopiac#readme",
+  "devDependencies": {
+    "chai": "^4.3.4"
+  }
 }
