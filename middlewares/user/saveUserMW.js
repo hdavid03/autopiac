@@ -7,6 +7,26 @@
 */
 const requireOption = require('../requireOption');
 
+function saveUserToDataBase(req, res, user, next) {
+    if (req.body.passwd === req.body.passwdagain) {
+        user.fname = req.body.knev;
+        user.lname = req.body.vnev;
+        user.city = req.body.lakhely;
+        user.email = req.body.email;
+        user.phone = req.body.szam;
+        user.passwd = req.body.passwd;
+        return user.save(error => {
+            if (error) {
+                return next(error);
+            }
+            return next();
+        });
+    } else {
+        res.locals.error = 'Nem egyeznek a jelszavak!';
+        return next();
+    }
+}
+
 module.exports = function (objectrepository) {
     const UserModel = requireOption(objectrepository, 'UserModel');
     return function (req, res, next) {
@@ -22,23 +42,10 @@ module.exports = function (objectrepository) {
                 return res.redirect('/');
             }
             res.locals.user = new UserModel();
-        }
-        if(req.body.passwd === req.body.passwdagain) {
-            res.locals.user.fname = req.body.knev;
-            res.locals.user.lname = req.body.vnev;
-            res.locals.user.city = req.body.lakhely;
-            res.locals.user.email = req.body.email;
-            res.locals.user.phone = req.body.szam;
-            res.locals.user.passwd = req.body.passwd;
-            return res.locals.user.save( error => {
-               if(error) {
-                   return next(error);
-               }
-               return next();
-            });
+            return saveUserToDataBase(req, res, res.locals.user, next);
         } else {
-            res.locals.error = 'Nem egyeznek a jelszavak!';
-           return next();
+            return saveUserToDataBase(req, res, res.locals.regUser, next);
         }
+
     }
 };
