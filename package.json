@@ -28,5 +28,8 @@
   "homepage": "https://github.com/hdavid03/autopiac#readme",
   "devDependencies": {
     "chai": "^4.3.4"
+  },
+  "directories": {
+    "test": "test"
   }
 }
